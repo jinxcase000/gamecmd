@@ -60,6 +60,22 @@ All three fields are optional — you can omit any that you don't need for a giv
 
 ---
 
+## Debugging
+
+To verify what gamecmd will pass to your game without launching it, use the debug flag:
+
+    GAMECMD_DEBUG=1 gamecmd stalker2 true
+
+This prints the resolved env vars, prefix, and suffix without needing Steam's %command% token.
+
+Example output:
+
+    ENV: GAMEMODE=1 PROTON_ENABLE_HDR=1 DXVK_HDR=1
+    PREFIX: mangohud gamemoderun game-performance
+    SUFFIX: -novid -high
+
+---
+
 ## License
 
 This is free and unencumbered software released into the public domain under the [Unlicense](LICENSE). Do whatever you want with it.
