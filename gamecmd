@@ -34,4 +34,4 @@ if test "$ENV_STRING" = "null"
 end
 
 # 7. Launch game with env vars, prefix commands, game command, and suffix args
-env $ENV_STRING $PREFIX_CMD $argv $SUFFIX_ARGS
+env $ENV_STRING (string split " " $PREFIX_CMD) $argv (string split " " -- $SUFFIX_ARGS)
