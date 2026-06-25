@@ -1,0 +1,20 @@
+# gamecmd game profiles
+# Each profile has three optional fields:
+#   env_vars: environment variables set before launch
+#   prefix:   commands that run before the game executable
+#   suffix:   arguments passed after the game executable
+
+blasphemous2:
+  env_vars: GAMEMODE=1
+  prefix: mangohud gamemoderun game-performance
+  suffix: -targetFrameRate 120
+
+stalker2:
+  env_vars: __GL_THREADED_OPTIMIZATIONS=1
+  prefix: gamemoderun
+  suffix: -novid -high
+
+witcher3:
+  env_vars: DXVK_ASYNC=1
+  prefix: gamemoderun
+  suffix: -fullscreen
