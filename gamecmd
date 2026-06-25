@@ -39,4 +39,4 @@ if [ "$GAMECMD_DEBUG" = "1" ]; then
     echo "PREFIX: $PREFIX_CMD"
     echo "SUFFIX: $SUFFIX_ARGS"
 fi
-env $ENV_STRING $PREFIX_CMD "$@" $SUFFIX_ARGS
+eval env $ENV_STRING $PREFIX_CMD '"$@"' $SUFFIX_ARGS
